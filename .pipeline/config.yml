@@ -1,0 +1,12 @@
+general:
+steps:
+  mtaBuild:
+    buildTarget: 'CF'
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'   
+    cloudFoundry:
+      org: '049cce5etrial'
+      space: 'dev'
+      credentialsId: '2d040748-075f-457f-8b6e-78333c59d451'
+      apiEndpoint: 'https://api.cf.us10.hana.ondemand.com' 
