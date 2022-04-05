@@ -26,6 +26,7 @@ pipeline {
     stages {
         stage('prepare') {
             steps {
+		    agent { docker 'mbtci-alpine:latest' }
         checkout scm 
         setupCommonPipelineEnvironment script: this
             }
