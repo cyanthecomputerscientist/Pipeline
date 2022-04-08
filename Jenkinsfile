@@ -11,9 +11,11 @@
      }
      stage('test')
      {
-         karmaExecuteTests script: this, modules: ['./nodejs'],
+         steps:
+            karmaExecuteScan: 
+                dockerImage: 'node:8-strech'
          installCommand: "npm config set @sap:registry https://npm.sap.com && npm install --quiet", 
- 	  runCommand: 'npm test'
+ 	     runCommand: 'npm test'
      }
      stage('deploy') 
      {
