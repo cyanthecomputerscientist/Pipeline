@@ -13,9 +13,7 @@
      {
          steps:
             karmaExecuteScan: 
-                dockerImage: 'node:8-strech',
-         installCommand: "npm config set @sap:registry https://npm.sap.com && npm install --quiet", 
- 	     runCommand: 'npm test'
+                dockerImage: 'node:8-strech'
      }
      stage('deploy') 
      {
