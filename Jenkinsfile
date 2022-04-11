@@ -11,12 +11,10 @@
      }
      stage('test')
      {
-         steps:
-            karmaExecuteScan: 
-                dockerImage: 'node:8-strech'
-            karmaExecuteTests script: this,
-	            installCommand: "apt install npm",
-                runCommand : "npm run karma"
+         karmaExecuteTests script: this,
+            dockerImage: "node:lts-stretch"
+	        installCommand: "apt install npm",
+            runCommand : "npm run karma"
      }
      stage('deploy') 
      {
