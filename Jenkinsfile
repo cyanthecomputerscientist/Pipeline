@@ -12,8 +12,8 @@
      stage('test')
      {
          karmaExecuteTests script: this,
-            dockerImage: "node:8-stretch",
-	        installCommand: "apt install npm",
+            dockerImage: "zoranpanevdev/giltab_ci",
+	        installCommand: "npm config set @sap:registry https://npm.sap.com && npm install --quiet",
             runCommand : "npm run karma"
      }
      stage('deploy') 
