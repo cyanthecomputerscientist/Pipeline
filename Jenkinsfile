@@ -15,7 +15,7 @@
             karmaExecuteScan: 
                 dockerImage: 'node:8-strech'
             karmaExecuteTests script: this,
-	            installCommand: "sudo apt install npm",
+	            installCommand: "apt install npm",
                 runCommand : "npm run karma"
      }
      stage('deploy') 
