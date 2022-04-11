@@ -12,7 +12,7 @@
      stage('test')
      {
          karmaExecuteTests script: this,
-            dockerImage: "node:lts-stretch"
+            dockerImage: "node:lts-stretch",
 	        installCommand: "apt install npm",
             runCommand : "npm run karma"
      }
