@@ -12,7 +12,7 @@
      stage('test')
      {
          karmaExecuteTests script: this,
-            dockerImage: "zoranpanevdev/giltab_ci",
+            dockerImage: "node:8-strech",
 	        installCommand: "npm config set @sap:registry https://npm.sap.com && npm install --quiet",
             runCommand : "npm test"
      }
