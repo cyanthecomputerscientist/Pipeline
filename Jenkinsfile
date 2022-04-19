@@ -14,7 +14,7 @@
          karmaExecuteTests script: this,
             dockerImage: "node",
 	        installCommand: "npm config set @sap:registry https://npm.sap.com && npm install --quiet",
-            runCommand : "npm test"
+            runCommand : "npm run test"
      }
      stage('deploy') 
      {
