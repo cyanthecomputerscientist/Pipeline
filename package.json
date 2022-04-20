@@ -41,7 +41,7 @@
         "build:mta": "rimraf resources mta_archives && mbt build --mtar archive",
         "undeploy": "cf undeploy sapui5demoapptrainer --delete-services --delete-service-keys",
         "karma": "karma start karma-ci.conf.js",
-        "test" : "node test/unit/Alltest.js"
+        "test" : "npm run karma"
     },
     "ui5": {
         "dependencies": [
