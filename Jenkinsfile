@@ -9,13 +9,13 @@
 	    
          mtaBuild script: this
      }
-     stage('test')
-     {
-         karmaExecuteTests script: this,
-            dockerImage: "node",
-	        installCommand: "npm config set @sap:registry https://npm.sap.com && npm install --quiet",
-            runCommand : "npm run test"
-     }
+    //  stage('test')
+    //  {
+    //      karmaExecuteTests script: this,
+    //         dockerImage: "node",
+	//         installCommand: "npm config set @sap:registry https://npm.sap.com && npm install --quiet",
+    //         runCommand : "npm run test"
+    //  }
      stage('deploy') 
      {
          cloudFoundryDeploy script: this
